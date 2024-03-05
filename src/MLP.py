@@ -30,9 +30,37 @@ neuron = Perceptron(inputs=2)
 neuron.set_weights([10,10,-15]) #AND
 
 # Challenge: Write your OR weights
+neuron_2 = Perceptron(inputs=2)
+neuron_2.set_weights([10,10,-5]) #OR
+
+# Write your NAND weights
+neuron_3 = Perceptron(inputs=2)
+neuron_3.set_weights([-10,-10,15]) #NAND
+
+# Write your NOR weights
+neuron_4 = Perceptron(inputs=2)
+neuron_4.set_weights([-15,-15,5]) #NOR
 
 print("Gate:")
 print ("0 0 = {0:.10f}".format(neuron.run([0,0])))
 print ("0 1 = {0:.10f}".format(neuron.run([0,1])))
 print ("1 0 = {0:.10f}".format(neuron.run([1,0])))
 print ("1 1 = {0:.10f}".format(neuron.run([1,1])))
+
+print("Gate 2:")
+print ("0 0 = {0:.10f}".format(neuron_2.run([0,0])))
+print ("0 1 = {0:.10f}".format(neuron_2.run([0,1])))
+print ("1 0 = {0:.10f}".format(neuron_2.run([1,0])))
+print ("1 1 = {0:.10f}".format(neuron_2.run([1,1])))
+
+print("Gate 3:")    
+print ("0 0 = {0:.10f}".format(neuron_3.run([0,0])))
+print ("0 1 = {0:.10f}".format(neuron_3.run([0,1])))
+print ("1 0 = {0:.10f}".format(neuron_3.run([1,0])))
+print ("1 1 = {0:.10f}".format(neuron_3.run([1,1])))
+
+print("Gate 4:")
+print ("0 0 = {0:.10f}".format(neuron_4.run([0,0])))
+print ("0 1 = {0:.10f}".format(neuron_4.run([0,1])))
+print ("1 0 = {0:.10f}".format(neuron_4.run([1,0])))
+print ("1 1 = {0:.10f}".format(neuron_4.run([1,1])))
